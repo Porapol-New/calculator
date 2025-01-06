@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:calculator/Circle.dart';
+import 'package:calculator/Rectangle.dart';
 import 'package:calculator/firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -48,11 +49,11 @@ class _MyAppState extends State<MyApp> {
           return MaterialPageRoute(builder: (context) => Circlearea());
         } else if (routeName == '/squareRoute') {
           return MaterialPageRoute(builder: (context) => SquareScreen());
-        } else if (routeName == '/triangleRoute') {
-          return MaterialPageRoute(builder: (context) => TriangleScreen());
+        } else if (routeName == '/Rectangle') {
+          return MaterialPageRoute(builder: (context) => Rectangle());
         } else {
           return MaterialPageRoute(
-            builder: (context) => NotFoundScreen(), // หน้าสำหรับ route ที่ไม่พบ
+            builder: (context) => NotFoundScreen(),
           );
         }
       },
@@ -196,9 +197,10 @@ class MenuCard extends StatelessWidget {
 
   IconData _getIconFromName(String iconName) {
     Map<String, IconData> iconMap = {
-      'circle_outlined': Icons.circle_outlined,
-      'square_outlined': Icons.square_outlined,
-      'triangle_outlined': Icons.change_history,
+      'circle_outlined': Icons.circle,
+      'square_outlined': Icons.square,
+      'Cylinder': Icons.blur_circular,
+      'Cube': Icons.widgets,
     };
 
     return iconMap[iconName] ?? Icons.help_outline;

@@ -14,18 +14,18 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(color: Colors.black87),
         ),
       ),
-      home: RectangleCalculatorScreen(),
+      home: Rectangle(),
     );
   }
 }
 
-class RectangleCalculatorScreen extends StatefulWidget {
+class Rectangle extends StatefulWidget {
   @override
-  _RectangleCalculatorScreenState createState() =>
-      _RectangleCalculatorScreenState();
+  _RectangleState createState() =>
+      _RectangleState();
 }
 
-class _RectangleCalculatorScreenState extends State<RectangleCalculatorScreen> {
+class _RectangleState extends State<Rectangle> {
   final TextEditingController _widthController = TextEditingController();
   final TextEditingController _heightController = TextEditingController();
 

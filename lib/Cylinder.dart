@@ -16,17 +16,17 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(color: Colors.black87),
         ),
       ),
-      home: CubeVolumeScreen(),
+      home: CubeVolume(),
     );
   }
 }
 
-class CubeVolumeScreen extends StatefulWidget {
+class CubeVolume extends StatefulWidget {
   @override
-  _CubeVolumeScreenState createState() => _CubeVolumeScreenState();
+  _CubeVolumeState createState() => _CubeVolumeState();
 }
 
-class _CubeVolumeScreenState extends State<CubeVolumeScreen> {
+class _CubeVolumeState extends State<CubeVolume> {
   final TextEditingController _sideController = TextEditingController();
   double _cubeVolume = 0.0;
   bool _showFormula = false; // ตัวแปรเพื่อควบคุมการแสดงคำอธิบายสูตร
